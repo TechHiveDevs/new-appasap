@@ -2,7 +2,7 @@
 import * as trpcExpress from "@trpc/server/adapters/express";
 import { createContext } from "./trpc.context.";
 import { router } from "./trpc.helper";
-import { dfggdfdfgdfgdfgdfgdfggdfhRouter } from "../../../entities/dfggdfdfgdfgdfgdfgdfggdfh/dfggdfdfgdfgdfgdfgdfggdfh.controller";
+import { xxxxxxxxxxxxRouter } from "../../../entities/xxxxxxxxxxxx/xxxxxxxxxxxx.controller";
 import { expressHandler } from "trpc-playground/handlers/express";
 import { renderTrpcPanel } from "trpc-panel";
 import { configs } from "../../configs/configs";
@@ -11,7 +11,7 @@ import { Request, Response } from "express";
 // =================================================================
 
 export const appRouter = router({
-    dfggdfdfgdfgdfgdfgdfggdfh: dfggdfdfgdfgdfgdfgdfggdfhRouter,
+    xxxxxxxxxxxx: xxxxxxxxxxxxRouter,
 });
 
 // =================================================================

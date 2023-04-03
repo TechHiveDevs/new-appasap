@@ -1,6 +1,6 @@
-import { Dfggdfdfgdfgdfgdfgdfggdfh } from "./dfggdfdfgdfgdfgdfgdfggdfh/ui.dfggdfdfgdfgdfgdfgdfggdfh"
+import { Xxxxxxxxxxxx } from "./xxxxxxxxxxxx/ui.xxxxxxxxxxxx"
 
 export const entities = [
-    Dfggdfdfgdfgdfgdfgdfggdfh,
+    Xxxxxxxxxxxx,
 ]
   
