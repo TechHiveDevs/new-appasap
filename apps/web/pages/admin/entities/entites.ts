@@ -1,6 +1,6 @@
-import { Faragello } from "./faragello/ui.faragello"
+import { Dfggdfdfgdfgdfgdfgdfggdfh } from "./dfggdfdfgdfgdfgdfgdfggdfh/ui.dfggdfdfgdfgdfgdfgdfggdfh"
 
 export const entities = [
-    Faragello,
+    Dfggdfdfgdfgdfgdfgdfggdfh,
 ]
   
