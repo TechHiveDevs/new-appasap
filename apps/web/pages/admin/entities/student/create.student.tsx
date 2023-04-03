@@ -6,7 +6,7 @@ import {
   required,
 } from 'react-admin'
 
-export function CreateM(_props: any) {
+export function CreateStudent(_props: any) {
   return (
     <Create>
       <SimpleForm>
