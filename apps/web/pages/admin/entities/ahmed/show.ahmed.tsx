@@ -5,7 +5,7 @@ import {
   SimpleShowLayout,
 } from 'react-admin'
 
-export function ShowStudent(_props: any) {
+export function ShowAhmed(_props: any) {
   return (
     <Show>
       <SimpleShowLayout>
