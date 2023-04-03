@@ -1,14 +1,14 @@
 import { publicProcedure, router } from '../../helpers/server/trpc/trpc.helper'
 import { genericCrudRouterController } from '../../helpers/generic-crud/generic-crud.controller'
-import { mohamedService } from './mohamed.service'
-import { mohamedValidation } from './mohamed.validation'
+import { faragelloService } from './faragello.service'
+import { faragelloValidation } from './faragello.validation'
 
-export const mohamedRouter = router({
-  ...genericCrudRouterController('mohamed', mohamedValidation),
+export const faragelloRouter = router({
+  ...genericCrudRouterController('faragello', faragelloValidation),
 
   // -------------------------------------
 
   customRoute: publicProcedure.query(({ ctx: _ctx, input: _input }) => {
-    return mohamedService.mohamedCustomService()
+    return faragelloService.faragelloCustomService()
   }),
 })
