@@ -1,6 +1,6 @@
-import { N } from "./n/ui.n"
+import { M } from "./m/ui.m"
 
 export const entities = [
-    N,
+    M,
 ]
   

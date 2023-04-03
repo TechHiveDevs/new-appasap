@@ -1,14 +1,14 @@
 import { publicProcedure, router } from '../../helpers/server/trpc/trpc.helper'
 import { genericCrudRouterController } from '../../helpers/generic-crud/generic-crud.controller'
-import { nService } from './n.service'
-import { nValidation } from './n.validation'
+import { mService } from './m.service'
+import { mValidation } from './m.validation'
 
-export const nRouter = router({
-  ...genericCrudRouterController('n', nValidation),
+export const mRouter = router({
+  ...genericCrudRouterController('m', mValidation),
 
   // -------------------------------------
 
   customRoute: publicProcedure.query(({ ctx: _ctx, input: _input }) => {
-    return nService.nCustomService()
+    return mService.mCustomService()
   }),
 })
