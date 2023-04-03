@@ -1,2 +1,3 @@
 export type Model = 
-  | 'ahmed'
+  | 'post'
+  | 'student'
