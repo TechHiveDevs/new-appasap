@@ -1,14 +1,14 @@
 import { publicProcedure, router } from '../../helpers/server/trpc/trpc.helper'
 import { genericCrudRouterController } from '../../helpers/generic-crud/generic-crud.controller'
-import { xxxxxxxxxxxxService } from './xxxxxxxxxxxx.service'
-import { xxxxxxxxxxxxValidation } from './xxxxxxxxxxxx.validation'
+import { superFaragService } from './superFarag.service'
+import { superFaragValidation } from './superFarag.validation'
 
-export const xxxxxxxxxxxxRouter = router({
-  ...genericCrudRouterController('xxxxxxxxxxxx', xxxxxxxxxxxxValidation),
+export const superFaragRouter = router({
+  ...genericCrudRouterController('superFarag', superFaragValidation),
 
   // -------------------------------------
 
   customRoute: publicProcedure.query(({ ctx: _ctx, input: _input }) => {
-    return xxxxxxxxxxxxService.xxxxxxxxxxxxCustomService()
+    return superFaragService.superFaragCustomService()
   }),
 })

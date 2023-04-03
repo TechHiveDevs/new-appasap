@@ -7,7 +7,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Xxxxxxxxxxxx {
+model SuperFarag {
   id Int @id @default(autoincrement())
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt  @default(now())

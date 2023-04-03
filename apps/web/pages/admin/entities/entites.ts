@@ -1,6 +1,6 @@
-import { Xxxxxxxxxxxx } from "./xxxxxxxxxxxx/ui.xxxxxxxxxxxx"
+import { SuperFarag } from "./superFarag/ui.superFarag"
 
 export const entities = [
-    Xxxxxxxxxxxx,
+    SuperFarag,
 ]
   

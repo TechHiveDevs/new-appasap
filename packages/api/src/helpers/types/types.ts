@@ -1,2 +1,2 @@
 export type Model = 
-  | 'xxxxxxxxxxxx'
+  | 'superFarag'
