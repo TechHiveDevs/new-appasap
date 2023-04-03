@@ -1,0 +1,48 @@
+version: '3.9'
+name: mario_api
+services:
+  #  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+  redis_cache:
+    container_name: ${PROJECT_NAME}_cache_redis
+    image: redis:7.0.8-alpine
+    restart: always
+    ports:
+      - $CACHE_PORT:$CACHE_PORT
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${CACHE_PASSWORD}
+    volumes: 
+      - cache:/data
+  #  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+  
+  db:
+    container_name: ${PROJECT_NAME}_db_pg
+    image: postgres
+    env_file: .env
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: $DATABASE_USER
+      POSTGRES_PASSWORD: $DATABASE_PASSWORD
+      POSTGRES_DB: $DATABASE_NAME
+    ports:
+      - $DATABASE_PORT:$DATABASE_PORT
+    volumes:
+      - db_pg_volume:/var/lib/postgres
+      
+  #  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+  
+  pgadmin:
+    container_name: ${PROJECT_NAME}_pgadmin4
+    env_file: .env
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: $DATABASE_NAME@$DATABASE_NAME.com
+      PGADMIN_DEFAULT_PASSWORD: $DATABASE_NAME
+    ports:
+      - "5050:80"
+
+  #  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+  
+volumes: 
+  db_pg_volume:
+  cache:
+    driver: local

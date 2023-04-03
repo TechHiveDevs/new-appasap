@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@my/ui/*": ["./packages/ui/*"],
+      "@my/api/*": ["./packages/api/*"]
+    }
+  },
+  "extends": "tsconfig.base"
+}
