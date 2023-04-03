@@ -7,7 +7,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Mario {
+model Mohamed {
   id Int @id @default(autoincrement())
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt  @default(now())

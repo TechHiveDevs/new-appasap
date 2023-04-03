@@ -1,6 +1,6 @@
-import { Mario } from "./mario/ui.mario"
+import { Mohamed } from "./mohamed/ui.mohamed"
 
 export const entities = [
-    Mario,
+    Mohamed,
 ]
   

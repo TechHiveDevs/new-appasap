@@ -6,7 +6,7 @@ import {
   required,
 } from 'react-admin'
 
-export function CreateMario(_props: any) {
+export function CreateMohamed(_props: any) {
   return (
     <Create>
       <SimpleForm>

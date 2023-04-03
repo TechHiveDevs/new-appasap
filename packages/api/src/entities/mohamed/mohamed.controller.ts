@@ -1,14 +1,14 @@
 import { publicProcedure, router } from '../../helpers/server/trpc/trpc.helper'
 import { genericCrudRouterController } from '../../helpers/generic-crud/generic-crud.controller'
-import { marioService } from './mario.service'
-import { marioValidation } from './mario.validation'
+import { mohamedService } from './mohamed.service'
+import { mohamedValidation } from './mohamed.validation'
 
-export const marioRouter = router({
-  ...genericCrudRouterController('mario', marioValidation),
+export const mohamedRouter = router({
+  ...genericCrudRouterController('mohamed', mohamedValidation),
 
   // -------------------------------------
 
   customRoute: publicProcedure.query(({ ctx: _ctx, input: _input }) => {
-    return marioService.marioCustomService()
+    return mohamedService.mohamedCustomService()
   }),
 })
