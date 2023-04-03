@@ -5,7 +5,7 @@ import {
   SimpleShowLayout,
 } from 'react-admin'
 
-export function ShowSuperFarag(_props: any) {
+export function ShowB(_props: any) {
   return (
     <Show>
       <SimpleShowLayout>

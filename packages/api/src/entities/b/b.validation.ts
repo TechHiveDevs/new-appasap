@@ -11,7 +11,7 @@ const fields = [
 
 // =================================================================
 
-export const superFaragValidation: typeof genericValidation = {
+export const bValidation: typeof genericValidation = {
   // ------------------------------
 
   ...genericValidation,

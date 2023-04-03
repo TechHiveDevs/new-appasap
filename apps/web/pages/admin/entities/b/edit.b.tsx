@@ -6,7 +6,7 @@ import {
   required,
 } from 'react-admin'
 
-export function EditSuperFarag(_props: any) {
+export function EditB(_props: any) {
   return (
     <Edit>
       <SimpleForm>
