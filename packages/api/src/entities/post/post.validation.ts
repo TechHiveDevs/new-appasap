@@ -7,13 +7,11 @@ const fields = [
   'id',
   'createdAt',
   'updatedAt',
-  'name',
-  'ssid',
 ] as const
 
 // =================================================================
 
-export const studentValidation: typeof genericValidation = {
+export const postValidation: typeof genericValidation = {
   // ------------------------------
 
   ...genericValidation,
@@ -54,8 +52,6 @@ export const studentValidation: typeof genericValidation = {
     id: z.number().optional(),
     createdAt: z.date().optional(),
     updatedAt: z.date().optional(),
-    name: z.string(),
-    ssid: z.number(),
   }),
 
   // ----------------------------------
@@ -66,8 +62,6 @@ export const studentValidation: typeof genericValidation = {
       id: z.number().optional(),
       createdAt: z.date().optional(),
       updatedAt: z.date().optional(),
-      name: z.string(),
-      ssid: z.number(),
     }).partial(),
   }),
 }

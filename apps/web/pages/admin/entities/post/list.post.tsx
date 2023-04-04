@@ -3,7 +3,6 @@ import {
   DatagridConfigurable,
   NumberField,
   DateField,
-  TextField,
   TextInput,
   EditButton,
   DeleteButton,
@@ -13,15 +12,13 @@ import { ListActions, RowActions } from '../../react-admin/components/Actions'
 // eslint-disable-next-line react/jsx-key
 const filters = [<TextInput label="Search" source="q" alwaysOn />]
 
-export function ListStudent(props: any) {
+export function ListPost(props: any) {
   return (
     <List {...props} filters={filters} actions={<ListActions />}>
       <DatagridConfigurable rowClick="show">
         <NumberField source="id" />
         <DateField source="createdAt" />
         <DateField source="updatedAt" />
-        <TextField source="name" />
-        <NumberField source="ssid" />
         <RowActions>
           <EditButton />
           <DeleteButton />

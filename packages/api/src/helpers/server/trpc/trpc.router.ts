@@ -3,6 +3,7 @@ import * as trpcExpress from "@trpc/server/adapters/express";
 import { createContext } from "./trpc.context.";
 import { router } from "./trpc.helper";
 import { studentRouter } from "../../../entities/student/student.controller";
+import { postRouter } from "../../../entities/post/post.controller";
 import { expressHandler } from "trpc-playground/handlers/express";
 import { renderTrpcPanel } from "trpc-panel";
 import { configs } from "../../configs/configs";
@@ -12,6 +13,7 @@ import { Request, Response } from "express";
 
 export const appRouter = router({
     student: studentRouter,
+    post: postRouter,
 });
 
 // =================================================================
