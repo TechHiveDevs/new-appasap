@@ -11,7 +11,7 @@ const fields = [
 
 // =================================================================
 
-export const courseValidation: typeof genericValidation = {
+export const mValidation: typeof genericValidation = {
   // ------------------------------
 
   ...genericValidation,
