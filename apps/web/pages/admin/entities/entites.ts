@@ -1,6 +1,6 @@
-import { M } from "./m/ui.m"
+import { SuperMario } from "./superMario/ui.superMario"
 
 export const entities = [
-    M,
+    SuperMario,
 ]
   
