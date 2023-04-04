@@ -1,8 +1,6 @@
-import { Student } from "./student/ui.student"
-import { Post } from "./post/ui.post"
+import { Mario } from "./mario/ui.mario"
 
 export const entities = [
-    Student,
-    Post,
+    Mario,
 ]
   

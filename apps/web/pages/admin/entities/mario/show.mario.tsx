@@ -5,7 +5,7 @@ import {
   SimpleShowLayout,
 } from 'react-admin'
 
-export function ShowPost(_props: any) {
+export function ShowMario(_props: any) {
   return (
     <Show>
       <SimpleShowLayout>
