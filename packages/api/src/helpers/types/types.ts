@@ -1,2 +1,2 @@
 export type Model = 
-  | 'students'
+  | 'course'
