@@ -1,6 +1,6 @@
-import { SuperMario } from "./superMario/ui.superMario"
+import { Student } from "./student/ui.student"
 
 export const entities = [
-    SuperMario,
+    Student,
 ]
   
