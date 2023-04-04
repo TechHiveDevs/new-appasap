@@ -7,7 +7,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Student {
+model Students {
   id Int @id @default(autoincrement())
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt  @default(now())
