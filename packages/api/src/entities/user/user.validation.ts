@@ -11,7 +11,7 @@ const fields = [
 
 // =================================================================
 
-export const marioValidation: typeof genericValidation = {
+export const userValidation: typeof genericValidation = {
   // ------------------------------
 
   ...genericValidation,

@@ -7,8 +7,17 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Mario {
+model User {
   id Int @id @default(autoincrement())
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt  @default(now())
+  posts Post[]  @relation("UserHasOnePost")
+}
+
+model Post {
+  id Int @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt  @default(now())
+  userId Int @unique
+  user User  @relation("UserHasOnePost",fields: [userId], references: [id])
 }

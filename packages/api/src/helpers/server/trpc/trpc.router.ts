@@ -2,7 +2,8 @@
 import * as trpcExpress from "@trpc/server/adapters/express";
 import { createContext } from "./trpc.context.";
 import { router } from "./trpc.helper";
-import { marioRouter } from "../../../entities/mario/mario.controller";
+import { userRouter } from "../../../entities/user/user.controller";
+import { postRouter } from "../../../entities/post/post.controller";
 import { expressHandler } from "trpc-playground/handlers/express";
 import { renderTrpcPanel } from "trpc-panel";
 import { configs } from "../../configs/configs";
@@ -11,7 +12,8 @@ import { Request, Response } from "express";
 // =================================================================
 
 export const appRouter = router({
-    mario: marioRouter,
+    user: userRouter,
+    post: postRouter,
 });
 
 // =================================================================
