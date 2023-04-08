@@ -3,7 +3,6 @@ import {
   DatagridConfigurable,
   NumberField,
   DateField,
-  ReferenceField,
   TextInput,
   EditButton,
   DeleteButton,
@@ -20,7 +19,6 @@ export function ListStudent(props: any) {
         <NumberField source="id" />
         <DateField source="createdAt" />
         <DateField source="updatedAt" />
-        <ReferenceField source="ex2" reference="student" />
         <RowActions>
           <EditButton />
           <DeleteButton />
