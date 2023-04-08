@@ -7,22 +7,17 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Supplier {
+model User {
   id Int @id @default(autoincrement())
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt  @default(now())
-  name String?
-  companyRegistrationCode String?
-  companyRegisterationCountry String?
-  isDisabled Boolean?
-  subSuppliers Supplier[]  @relation("SupplierHasOneSupplier")
-  parentId Int @unique
-  serviceType ServiceType  @default(EVIECARESUBSUPPLIER)
-  parent Supplier  @relation("SupplierHasOneSupplier",fields: [parentId], references: [id])
+  posts Post[]  @relation("UserHasOnePost")
 }
 
-enum ServiceType {
-  EVIECARESUBSUPPLIER
-  INTERNALSUBSUPPLIER
-  PARENTSUPPLIER
+model Post {
+  id Int @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt  @default(now())
+  userId Int @unique
+  user User  @relation("UserHasOnePost",fields: [userId], references: [id])
 }

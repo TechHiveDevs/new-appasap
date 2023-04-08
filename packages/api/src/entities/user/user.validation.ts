@@ -7,17 +7,11 @@ const fields = [
   'id',
   'createdAt',
   'updatedAt',
-  'name',
-  'companyRegistrationCode',
-  'companyRegisterationCountry',
-  'isDisabled',
-  'parentId',
-  'serviceType',
 ] as const
 
 // =================================================================
 
-export const supplierValidation: typeof genericValidation = {
+export const userValidation: typeof genericValidation = {
   // ------------------------------
 
   ...genericValidation,
@@ -58,12 +52,6 @@ export const supplierValidation: typeof genericValidation = {
     id: z.number().optional(),
     createdAt: z.date().optional(),
     updatedAt: z.date().optional(),
-    name: z.string().optional(),
-    companyRegistrationCode: z.string().optional(),
-    companyRegisterationCountry: z.string().optional(),
-    isDisabled: z.boolean().optional(),
-    parentId: z.number(),
-    serviceType: z.enum(['EVIECARESUBSUPPLIER','INTERNALSUBSUPPLIER','PARENTSUPPLIER']),
   }),
 
   // ----------------------------------
@@ -74,12 +62,6 @@ export const supplierValidation: typeof genericValidation = {
       id: z.number().optional(),
       createdAt: z.date().optional(),
       updatedAt: z.date().optional(),
-      name: z.string().optional(),
-      companyRegistrationCode: z.string().optional(),
-      companyRegisterationCountry: z.string().optional(),
-      isDisabled: z.boolean().optional(),
-      parentId: z.number(),
-      serviceType: z.enum(['EVIECARESUBSUPPLIER','INTERNALSUBSUPPLIER','PARENTSUPPLIER']),
     }).partial(),
   }),
 }
