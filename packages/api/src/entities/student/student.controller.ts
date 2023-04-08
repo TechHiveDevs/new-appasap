@@ -1,14 +1,14 @@
 import { publicProcedure, router } from '../../helpers/server/trpc/trpc.helper'
 import { genericCrudRouterController } from '../../helpers/generic-crud/generic-crud.controller'
-import { userService } from './user.service'
-import { userValidation } from './user.validation'
+import { studentService } from './student.service'
+import { studentValidation } from './student.validation'
 
-export const userRouter = router({
-  ...genericCrudRouterController('user', userValidation),
+export const studentRouter = router({
+  ...genericCrudRouterController('student', studentValidation),
 
   // -------------------------------------
 
   customRoute: publicProcedure.query(({ ctx: _ctx, input: _input }) => {
-    return userService.userCustomService()
+    return studentService.studentCustomService()
   }),
 })

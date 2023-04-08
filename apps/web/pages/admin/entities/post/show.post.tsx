@@ -13,7 +13,7 @@ export function ShowPost(_props: any) {
         <NumberField source="id" />
         <DateField source="createdAt" />
         <DateField source="updatedAt" />
-        <ReferenceField source="userId" reference="user" />
+        <ReferenceField source="studentId" reference="student" />
       </SimpleShowLayout>
     </Show>
   )

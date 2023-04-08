@@ -7,17 +7,20 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model User {
-  id Int @id @default(autoincrement())
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt  @default(now())
-  posts Post[]  @relation("UserHasOnePost")
-}
-
 model Post {
   id Int @id @default(autoincrement())
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt  @default(now())
-  userId Int @unique
-  user User  @relation("UserHasOnePost",fields: [userId], references: [id])
+  studentId Int @unique
+  student Student  @relation("StudentHasOnePost",fields: [studentId], references: [id])
+}
+
+model Student {
+  id Int @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt  @default(now())
+  aaa Student?  @relation("StudentHasOneStudent")
+  ex2 Int @unique
+  posts Post[]  @relation("StudentHasOnePost")
+  ex Student  @relation("StudentHasOneStudent",fields: [ex2], references: [id])
 }

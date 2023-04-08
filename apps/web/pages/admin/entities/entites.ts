@@ -1,8 +1,8 @@
-import { User } from "./user/ui.user"
 import { Post } from "./post/ui.post"
+import { Student } from "./student/ui.student"
 
 export const entities = [
-    User,
     Post,
+    Student,
 ]
   

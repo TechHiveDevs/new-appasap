@@ -7,11 +7,12 @@ const fields = [
   'id',
   'createdAt',
   'updatedAt',
+  'ex2',
 ] as const
 
 // =================================================================
 
-export const userValidation: typeof genericValidation = {
+export const studentValidation: typeof genericValidation = {
   // ------------------------------
 
   ...genericValidation,
@@ -52,6 +53,7 @@ export const userValidation: typeof genericValidation = {
     id: z.number().optional(),
     createdAt: z.date().optional(),
     updatedAt: z.date().optional(),
+    ex2: z.number(),
   }),
 
   // ----------------------------------
@@ -62,6 +64,7 @@ export const userValidation: typeof genericValidation = {
       id: z.number().optional(),
       createdAt: z.date().optional(),
       updatedAt: z.date().optional(),
+      ex2: z.number(),
     }).partial(),
   }),
 }
