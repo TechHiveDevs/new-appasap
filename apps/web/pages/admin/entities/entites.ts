@@ -1,6 +1,6 @@
-import { Student } from "./student/ui.student"
+import { Aaaaa } from "./aaaaa/ui.aaaaa"
 
 export const entities = [
-    Student,
+    Aaaaa,
 ]
   
