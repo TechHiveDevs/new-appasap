@@ -11,4 +11,13 @@ model Aaaaa {
   id Int @id @default(autoincrement())
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt  @default(now())
+  xyz Bbbbbbbbbbbbbbbbb?  @relation("AaaaaHasOneBbbbbbbbbbbbbbbbb")
+}
+
+model Bbbbbbbbbbbbbbbbb {
+  id Int @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt  @default(now())
+  aaaaaId Int @unique
+  aaaaa Aaaaa  @relation("AaaaaHasOneBbbbbbbbbbbbbbbbb",fields: [aaaaaId], references: [id])
 }
