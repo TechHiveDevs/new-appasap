@@ -3,6 +3,7 @@ import * as trpcExpress from "@trpc/server/adapters/express";
 import { createContext } from "./trpc.context.";
 import { router } from "./trpc.helper";
 import { userRouter } from "../../../entities/user/user.controller";
+import { ammarPostRouter } from "../../../entities/ammarPost/ammarPost.controller";
 import { expressHandler } from "trpc-playground/handlers/express";
 import { renderTrpcPanel } from "trpc-panel";
 import { configs } from "../../configs/configs";
@@ -12,6 +13,7 @@ import { Request, Response } from "express";
 
 export const appRouter = router({
     user: userRouter,
+    ammarPost: ammarPostRouter,
 });
 
 // =================================================================

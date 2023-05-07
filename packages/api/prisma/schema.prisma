@@ -11,4 +11,13 @@ model User {
   id Int @id @default(autoincrement())
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt  @default(now())
+  ammarPosts AmmarPost[]  @relation("UserHasOneAmmarPost")
+}
+
+model AmmarPost {
+  id Int @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt  @default(now())
+  userId Int @unique
+  user User  @relation("UserHasOneAmmarPost",fields: [userId], references: [id])
 }
