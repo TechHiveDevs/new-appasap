@@ -12,4 +12,61 @@ model User {
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt  @default(now())
   name String
+  nickname String?
+  email String @unique
+  phone String
+  password String
+  otp Boolean?
+  otpExpiresAt DateTime?
+  carPlateNumber String @unique
+  pinCode Int
+  profilePicture String?
+  transactionId Int @unique
+  city String?
+  district String?
+  transaction Transaction  @relation("TransactionHasOneUser",fields: [transactionId], references: [id])
+}
+
+model Service {
+  id Int @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt  @default(now())
+  name String
+  transactionId Int @unique
+  transaction Transaction  @relation("TransactionHasOneService",fields: [transactionId], references: [id])
+}
+
+model GasStation {
+  id Int @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt  @default(now())
+  name String
+  city String?
+  district String?
+  latitude Float?
+  longitude Float?
+  transactionId Int @unique
+  transaction Transaction  @relation("TransactionHasOneGasStation",fields: [transactionId], references: [id])
+}
+
+model Transaction {
+  id Int @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt  @default(now())
+  user User?  @relation("TransactionHasOneUser")
+  date DateTime?
+  service Service?  @relation("TransactionHasOneService")
+  gasStation GasStation?  @relation("TransactionHasOneGasStation")
+  amount Float?
+  litres Float?
+  kilometers Int?
+  litresScreenshot String?
+  kilometersScreenshot String?
+  statu Statu  @default(APPROVED)
+}
+
+enum Statu {
+  APPROVED
+  PENDING
+  DECLINED
 }

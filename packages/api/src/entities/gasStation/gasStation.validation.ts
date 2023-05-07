@@ -8,23 +8,16 @@ const fields = [
   'createdAt',
   'updatedAt',
   'name',
-  'nickname',
-  'email',
-  'phone',
-  'password',
-  'otp',
-  'otpExpiresAt',
-  'carPlateNumber',
-  'pinCode',
-  'profilePicture',
-  'transactionId',
   'city',
   'district',
+  'latitude',
+  'longitude',
+  'transactionId',
 ] as const
 
 // =================================================================
 
-export const userValidation: typeof genericValidation = {
+export const gasStationValidation: typeof genericValidation = {
   // ------------------------------
 
   ...genericValidation,
@@ -66,18 +59,11 @@ export const userValidation: typeof genericValidation = {
     createdAt: z.date().optional(),
     updatedAt: z.date().optional(),
     name: z.string(),
-    nickname: z.string().optional(),
-    email: z.string(),
-    phone: z.string(),
-    password: z.string(),
-    otp: z.boolean().optional(),
-    otpExpiresAt: z.date().optional(),
-    carPlateNumber: z.string(),
-    pinCode: z.number(),
-    profilePicture: z.string().optional(),
-    transactionId: z.number(),
     city: z.string().optional(),
     district: z.string().optional(),
+    latitude: z.number().optional(),
+    longitude: z.number().optional(),
+    transactionId: z.number(),
   }),
 
   // ----------------------------------
@@ -89,18 +75,11 @@ export const userValidation: typeof genericValidation = {
       createdAt: z.date().optional(),
       updatedAt: z.date().optional(),
       name: z.string(),
-      nickname: z.string().optional(),
-      email: z.string(),
-      phone: z.string(),
-      password: z.string(),
-      otp: z.boolean().optional(),
-      otpExpiresAt: z.date().optional(),
-      carPlateNumber: z.string(),
-      pinCode: z.number(),
-      profilePicture: z.string().optional(),
-      transactionId: z.number(),
       city: z.string().optional(),
       district: z.string().optional(),
+      latitude: z.number().optional(),
+      longitude: z.number().optional(),
+      transactionId: z.number(),
     }).partial(),
   }),
 }
