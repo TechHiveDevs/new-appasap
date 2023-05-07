@@ -1,3 +1,2 @@
 export type Model = 
-  | 'aaaaa'
-  | 'bbbbbbbbbbbbbbbbb'
+  | 'user'

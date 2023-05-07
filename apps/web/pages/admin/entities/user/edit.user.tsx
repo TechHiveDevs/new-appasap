@@ -1,19 +1,19 @@
 import { 
-  Create,
+  Edit,
   SimpleForm,
   NumberInput,
   DateTimeInput,
   required,
 } from 'react-admin'
 
-export function CreateAaaaa(_props: any) {
+export function EditUser(_props: any) {
   return (
-    <Create>
+    <Edit>
       <SimpleForm>
         <NumberInput source="id" variant="outlined" validate={[required()]} />
         <DateTimeInput source="createdAt" variant="outlined" validate={[required()]} />
         <DateTimeInput source="updatedAt" variant="outlined" validate={[required()]} />
       </SimpleForm>
-    </Create>
+    </Edit>
   )
 }

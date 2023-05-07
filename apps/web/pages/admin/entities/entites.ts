@@ -1,8 +1,6 @@
-import { Aaaaa } from "./aaaaa/ui.aaaaa"
-import { Bbbbbbbbbbbbbbbbb } from "./bbbbbbbbbbbbbbbbb/ui.bbbbbbbbbbbbbbbbb"
+import { User } from "./user/ui.user"
 
 export const entities = [
-    Aaaaa,
-    Bbbbbbbbbbbbbbbbb,
+    User,
 ]
   
