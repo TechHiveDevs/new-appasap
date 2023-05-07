@@ -2,6 +2,7 @@ import {
   Show,
   NumberField,
   DateField,
+  TextField,
   SimpleShowLayout,
 } from 'react-admin'
 
@@ -12,6 +13,7 @@ export function ShowUser(_props: any) {
         <NumberField source="id" />
         <DateField source="createdAt" />
         <DateField source="updatedAt" />
+        <TextField source="name" />
       </SimpleShowLayout>
     </Show>
   )

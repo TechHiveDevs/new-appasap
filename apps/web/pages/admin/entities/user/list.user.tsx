@@ -3,6 +3,7 @@ import {
   DatagridConfigurable,
   NumberField,
   DateField,
+  TextField,
   TextInput,
   EditButton,
   DeleteButton,
@@ -19,6 +20,7 @@ export function ListUser(props: any) {
         <NumberField source="id" />
         <DateField source="createdAt" />
         <DateField source="updatedAt" />
+        <TextField source="name" />
         <RowActions>
           <EditButton />
           <DeleteButton />
